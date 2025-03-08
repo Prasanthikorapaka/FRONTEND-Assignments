@@ -1,0 +1,17 @@
+.box-pixels {
+    width: 300px; /* Width in pixels */
+    height: 150px; /* Height in pixels */
+    background-color: lightcoral;
+    text-align: center;
+    line-height: 150px;
+    border: 2px solid black;
+}
+
+.box-percentage {
+    width: 50%; /* Width in percentage */
+    height: 30vh; /* Height in viewport height */
+    background-color: lightgreen;
+    text-align: center;
+    line-height: 30vh;
+    border: 2px solid black;
+}

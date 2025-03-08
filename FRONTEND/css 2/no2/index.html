@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility & Display</title>
+    <style>
+        .hidden { visibility: hidden; }  /* Element exists but is invisible */
+        .visible { visibility: visible; }
+        .collapse { visibility: collapse; } /* Works with table elements */
+
+        .none { display: none; }  /* Element removed from layout */
+        .inline { display: inline; }
+        .block { display: block; }
+        .contents { display: contents; }
+        .list-item { display: list-item; }
+    </style>
+</head>
+<body>
+    <p class="hidden">This text is hidden</p>
+    <p class="visible">This text is visible</p>
+    <p class="collapse">This text collapses in tables</p>
+    
+    <p class="none">This text will not appear</p>
+    <p class="inline">This is inline text</p>
+    <p class="block">This is a block element</p>
+    <p class="contents">This behaves as contents</p>
+    <p class="list-item">This behaves like a list item</p>
+</body>
+</html>

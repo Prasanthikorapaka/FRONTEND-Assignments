@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* Styling for different sections */
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Non-Semantic Elements -->
+    <h2>1️⃣ Non-Semantic Elements (&lt;div&gt; and &lt;span&gt;)</h2>
+    <div class="box">
+        <p>This is a <span style="color: red;">red-colored</span> text inside a &lt;span&gt; inside a &lt;div&gt;.</p>
+    </div>
+
+    <!-- 2. Semantic Elements -->
+    <h2>2️⃣ Semantic Elements (&lt;form&gt;, &lt;table&gt;, &lt;article&gt;)</h2>
+
+    <form class="box">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>HTML & CSS</td>
+            <td>1 Month</td>
+        </tr>
+    </table>
+
+    <article class="box">
+        <h3>Latest Tech News</h3>
+        <p>HTML5 is widely used for modern web development...</p>
+    </article>
+
+    <!-- 3. All HTML5 Elements -->
+    <h2>3️⃣ All HTML5 Elements</h2>
+
+    <header class="box">
+        <h1>Website Header</h1>
+        <nav>
+            <a href="#">Home</a> | <a href="#">About</a>
+        </nav>
+    </header>
+
+    <section class="box">
+        <hgroup>
+            <h2>Welcome to Our Website</h2>
+            <h3>Your one-stop solution for web development</h3>
+        </hgroup>
+    </section>
+
+    <aside class="box">
+        <p>Advertisement: Get 50% off on Web Hosting!</p>
+    </aside>
+
+    <figure class="box">
+        <img src="https://images.unsplash.com/photo-1636955840493-f43a02bfa064?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="300">
+        <figcaption>Beautiful Abstract Background</figcaption>
+    </figure>
+
+    <p>Important Note: <mark>HTML5 makes web development easier!</mark></p>
+
+    <p>Today's date is: <time datetime="2025-03-08">March 8, 2025</time></p>
+
+    <footer class="box">
+        <p>&copy; 2025 My Website | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

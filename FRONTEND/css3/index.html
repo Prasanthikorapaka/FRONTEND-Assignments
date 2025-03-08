@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Effects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* 1. CSS Shadow Effects */
+        .image-box {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .image-box:hover {
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 2. CSS Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px auto;
+            animation: fadeIn 2s infinite alternate;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .pagination li {
+            margin: 5px;
+            padding: 10px 15px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .pagination li:hover {
+            background-color: lightgray;
+        }
+
+        /* 3. CSS Positioning */
+        .position-box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            background-color: lightcoral;
+        }
+        .static { position: static; }
+        .relative { position: relative; left: 20px; }
+        .absolute { position: absolute; top: 50px; left: 50px; }
+        .fixed { position: fixed; bottom: 10px; right: 10px; background-color: gold; }
+        .sticky { position: sticky; top: 0; background-color: lightgreen; padding: 10px; }
+
+        /* 4. Overflow Handling */
+        .overflow-box {
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 20px auto;
+        }
+
+        /* 5. Image Opacity */
+        .opacity-image {
+            width: 400px;
+            transition: opacity 0.3s;
+        }
+        .opacity-image:hover {
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. Shadow Effects -->
+    <h2>1️⃣ CSS Shadow Effects</h2>
+    <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1636955840493-f43a02bfa064?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Sample Image" width="400">
+    </div>
+
+    <!-- 2. CSS Animations -->
+    <h2>2️⃣ CSS Animations</h2>
+    <div class="animated-box"></div>
+
+    <!-- Pagination -->
+    <h3>Pagination Example</h3>
+    <ul class="pagination">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <!-- 3. CSS Positioning -->
+    <h2>3️⃣ CSS Positioning</h2>
+    <div class="position-box static">Static</div>
+    <div class="position-box relative">Relative</div>
+    <div class="position-box absolute">Absolute</div>
+    <div class="position-box fixed">Fixed</div>
+    <div class="position-box sticky">Sticky</div>
+
+    <!-- 4. Handling Overflow -->
+    <h2>4️⃣ Handling Overflow</h2>
+    <div class="overflow-box">
+        This is a long content box. Scroll to see more content inside this div. More text, more text, more text, more text, more text, more text, more text...
+    </div>
+
+    <!-- 5. Image Opacity (Same Image as Above) -->
+    <h2>5️⃣ Image Opacity Effect</h2>
+    <img src="https://images.unsplash.com/photo-1636955840493-f43a02bfa064?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         class="opacity-image" alt="Hover Image">
+
+</body>
+</html>

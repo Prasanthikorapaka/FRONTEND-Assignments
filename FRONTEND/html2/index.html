@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Elements</title>
+</head>
+<body>
+
+    <h2>1. Basic Input Fields</h2>
+    <form>
+        <label>Text: <input type="text" name="username"></label><br><br>
+        <label>Password: <input type="password" name="password"></label><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset"><br><br>
+        
+        <label>Male <input type="radio" name="gender" value="male"></label>
+        <label>Female <input type="radio" name="gender" value="female"></label><br><br>
+
+        <label>Subscribe: <input type="checkbox" name="subscribe"></label><br><br>
+        
+        <button type="button" onclick="alert('Button Clicked')">Click Me</button>
+    </form>
+
+    <h2>2. HTML5 Input Types</h2>
+    <form>
+        <label>Number: <input type="number" min="1" max="100"></label><br><br>
+        <label>Range: <input type="range" min="0" max="100"></label><br><br>
+        <label>Color: <input type="color"></label><br><br>
+        <label>Date: <input type="date"></label><br><br>
+        <label>File Upload: <input type="file"></label><br><br>
+        <label>Time: <input type="time"></label><br><br>
+        <label>Month: <input type="month"></label><br><br>
+        <label>Week: <input type="week"></label><br><br>
+        <label>Email: <input type="email" required></label><br><br>
+    </form>
+
+    <h2>3. Input Restrictions</h2>
+    <form>
+        <label>Disabled: <input type="text" disabled></label><br><br>
+        <label>Max (Max: 50): <input type="number" max="50"></label><br><br>
+        <label>Max Length (5 characters): <input type="text" maxlength="5"></label><br><br>
+        <label>Min (Min: 10): <input type="number" min="10"></label><br><br>
+        <label>Readonly: <input type="text" value="Read-Only Text" readonly></label><br><br>
+        <label>Required: <input type="text" required></label><br><br>
+        <label>Size (Width 10): <input type="text" size="10"></label><br><br>
+        <label>Default Value: <input type="text" value="Default Text"></label><br><br>
+    </form>
+
+    <h2>4. Target Attribute</h2>
+    <p>
+        <a href="https://www.google.com" target="_blank">Open Google in a new tab</a><br>
+        <a href="https://www.wikipedia.org" target="_self">Open Wikipedia in the same tab</a><br>
+        <a href="https://www.bing.com" target="_parent">Open Bing in parent frame</a><br>
+        <a href="https://www.yahoo.com" target="_top">Open Yahoo in the full body of the page</a><br>
+    </p>
+
+    <h2>5. Iframe and Marquee</h2>
+    <h3>Iframe Example</h3>
+    <iframe src="https://www.wikipedia.org" width="600" height="300" style="border:1px solid black;"></iframe>
+
+    <h3>Marquee Example</h3>
+    <marquee behavior="scroll" direction="left">This is a scrolling marquee text!</marquee>
+</body>
+</html>

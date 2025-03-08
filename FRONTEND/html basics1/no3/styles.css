@@ -1,0 +1,30 @@
+/* Pseudo-class: Change link color when hovered */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* Pseudo-class: Change background color of input when focused */
+input:focus {
+    background-color: lightyellow;
+    border: 2px solid blue;
+}
+
+/* Pseudo-element: Style the first letter of paragraphs */
+p::first-letter {
+    font-size: 1.5em;
+    color: blue;
+    font-weight: bold;
+}
+
+/* Pseudo-element: Style the first line */
+p::first-line {
+    font-style: italic;
+}
+
+/* Highlight Section 2 when visited */
+#section2:target {
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+}

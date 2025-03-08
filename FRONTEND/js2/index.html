@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Access and Properties</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .box { margin: 20px 0; padding: 10px; border: 1px solid #000; width: 300px; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Button Disappear -->
+    <div class="box">
+        <h3>1️⃣ Button Disappear</h3>
+        <button onclick="this.style.display='none'">Click to Disappear</button>
+    </div>
+
+    <!-- 2. Call vs Apply -->
+    <div class="box">
+        <h3>2️⃣ call() vs apply()</h3>
+        <button onclick="showCallApply()">Check Console</button>
+    </div>
+
+    <!-- 3. Simple Counter -->
+    <div class="box">
+        <h3>3️⃣ Simple Counter</h3>
+        <p>Count: <span id="count">0</span></p>
+        <button onclick="increment()">Count</button>
+    </div>
+
+    <!-- 4. Counter with Getter & Setter -->
+    <div class="box">
+        <h3>4️⃣ Counter with Getters & Setters</h3>
+        <p>Count: <span id="countSetter">0</span></p>
+        <button onclick="counter.increment()">Count</button>
+    </div>
+
+    <!-- 5. Object Prototype -->
+    <div class="box">
+        <h3>5️⃣ Object Prototype</h3>
+        <button onclick="showPrototype()">Check Console</button>
+    </div>
+
+    <script>
+        // 2. Call vs Apply
+        function greet(greeting, punctuation) {
+            console.log(greeting + " " + this.name + punctuation);
+        }
+
+        let person = { name: "Prasanthi" };
+
+        function showCallApply() {
+            greet.call(person, "Hello", "!");  // Using call()
+            greet.apply(person, ["Hi", "."]);  // Using apply()
+        }
+
+        // 3. Simple Counter
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById("count").innerText = count;
+        }
+
+        // 4. Counter with Getter & Setter
+        let counter = {
+            _count: 0,
+
+            get value() {
+                return this._count;
+            },
+
+            set value(val) {
+                this._count = val;
+                document.getElementById("countSetter").innerText = this._count;
+            },
+
+            increment() {
+                this.value = this._count + 1;
+            }
+        };
+
+        // 5. Object Prototype
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype.age = 20; // Adding new property
+
+        function showPrototype() {
+            let p1 = new Person("Prasanthi");
+            console.log("Name:", p1.name);
+            console.log("Age:", p1.age);
+        }
+    </script>
+
+</body>
+</html>

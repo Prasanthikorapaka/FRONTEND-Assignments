@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1️⃣ Click Button to Show Current Date & Time</h2>
+    <button id="showTime">Show Date & Time</button>
+    <p id="dateTime"></p>
+
+    <h2>2️⃣ JavaScript Form Validation</h2>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Enter Name">
+        <button type="submit">Submit</button>
+        <p id="error" style="color:red;"></p>
+    </form>
+
+    <h2>3️⃣ Debugging with console.log()</h2>
+    <p>Open the console (F12 → Console Tab) to see debugging logs.</p>
+
+    <h2>4️⃣ Cookies in JavaScript</h2>
+    <button onclick="setCookie('username', 'Prasanthi', 1)">Set Cookie</button>
+    <button onclick="alert(getCookie('username'))">Get Cookie</button>
+    <button onclick="checkCookie()">Check Cookie</button>
+
+    <h2>5️⃣ JSON Object Access</h2>
+    <p id="jsonData"></p>
+
+    <script>
+        // 1. Show Date & Time
+        document.getElementById("showTime").addEventListener("click", function() {
+            document.getElementById("dateTime").innerText = new Date();
+        });
+
+        // 2. JavaScript Validation
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            if (name === "") {
+                document.getElementById("error").innerText = "Name cannot be empty!";
+                return false;
+            }
+            return true;
+        }
+
+        // 3. Console.log() Debugging
+        let num = 10;
+        console.log("The value of num is:", num);
+        console.log("Checking if num is greater than 5:", num > 5);
+
+        // 4. Cookie Functions
+        function setCookie(name, value, days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
+        }
+
+        function getCookie(name) {
+            let cookies = document.cookie.split("; ");
+            for (let i of cookies) {
+                let [key, value] = i.split("=");
+                if (key === name) return value;
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            let user = getCookie("username");
+            if (user !== "") {
+                alert("Welcome back, " + user);
+            } else {
+                alert("No cookie found!");
+            }
+        }
+
+        // 5. JSON Object Access
+        let person = { name: "Prasanthi", age: 20, city: "Srikakulam" };
+        document.getElementById("jsonData").innerText = `Name: ${person.name}, Age: ${person.age}, City: ${person.city}`;
+    </script>
+
+</body>
+</html>

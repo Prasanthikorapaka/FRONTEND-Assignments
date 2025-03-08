@@ -1,0 +1,7 @@
+body {
+    background-color: lightblue;
+    background-image: url('background.jpg'); /* Add your image */
+    background-size: cover; 
+    background-attachment: fixed; /* Keeps image fixed */
+    background-position: center;
+}
